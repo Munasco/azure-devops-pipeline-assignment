@@ -11,11 +11,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
  * User
  */
+@Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
@@ -33,35 +35,8 @@ public class User {
     @Column(name = "country")
     private String country;
 
-    public String getCountry() {
-        return country;
-    }
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getGovernmentName() {
-        return governmentName;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
     public void setDateOfBirth(long dobUnix) {
         Instant dateInstance = Instant.ofEpochMilli(dobUnix);
         this.dateOfBirth = dateInstance.atZone(ZoneOffset.UTC).toLocalDate();
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setGovernmentName(String governmentName) {
-        this.governmentName = governmentName;
     }
 }

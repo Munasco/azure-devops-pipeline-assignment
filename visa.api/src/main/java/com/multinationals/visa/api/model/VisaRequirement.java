@@ -9,30 +9,22 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
+@Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
-public class VisaPerk {
+public class VisaRequirement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "perk_id")
-    private long perkId;
+    @Column(name = "requirement_id")
+    private long requirementId;
 
     @ManyToOne
     @JoinColumn(name="visa_id")
     private Visa visa;
 
-    @Column(name = "perk")
-    private String perk;
-
-    public String getPerk() {
-        return perk;
-    }
-
-    public void setPerk(String perk) {
-        this.perk = perk;
-    }
+    private String requirement;
 }

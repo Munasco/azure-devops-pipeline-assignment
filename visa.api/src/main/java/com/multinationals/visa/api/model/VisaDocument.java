@@ -1,5 +1,6 @@
 package com.multinationals.visa.api.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,32 +9,35 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * VisaSteps
+ * VisaDocument
  */
+@Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
-public class VisaStep {
-
+public class VisaDocument {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @Column(name = "document_id")
+    private long documentId;
 
     @ManyToOne
-    @JoinColumn(name="visa_id")
+    @JoinColumn(name = "visa_id")
     private Visa visa;
 
-    private String step;
+    @Column(name = "document")
+    private String document;
 
-    public String getStep() {
-        return step;
+    public String getDocument() {
+        return document;
     }
-    
-    public void setStep(String step) {
-        this.step = step;
+
+    public void setDocument(String document) {
+        this.document = document;
     }
     
 }
