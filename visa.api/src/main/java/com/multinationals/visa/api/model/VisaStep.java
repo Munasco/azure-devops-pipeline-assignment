@@ -22,7 +22,7 @@ public class VisaStep {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long stepId;
 
     @ManyToOne
     @JoinColumn(name="visa_id")

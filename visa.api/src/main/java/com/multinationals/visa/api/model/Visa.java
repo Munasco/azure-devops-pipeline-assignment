@@ -2,13 +2,7 @@ package com.multinationals.visa.api.model;
 
 import java.util.List;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,25 +18,25 @@ import lombok.NoArgsConstructor;
 public class Visa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long visaId;
+    private Long visaId;
 
-    @Column(name = "name")
     private String name;
 
-    @Column(name = "process_time_in_weeks")
-    private int processTimeInWeeks;
+    private Integer processTimeInDays;
 
-    @Column(name = "fees")
-    private int fees;
+    private Double fees;
 
-    @Column(name = "country")
-    private String country;
+    @ManyToOne
+    @JoinColumn(name = "country_code", referencedColumnName = "countryCode")
+    private Country country;
 
-    @Column(name = "region")
     private String region;
 
-    @Column(name = "gdp_rank")
-    private int gdpRank;
+    private Integer gdpRank;
+
+    private Boolean hasPerks;
+
+    private Boolean hasRoadToCitizenship;
 
     @OneToMany(mappedBy = "visa", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<VisaDocument> documents;
