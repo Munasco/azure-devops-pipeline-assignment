@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import com.multinationals.visa.api.model.Country;
 import com.multinationals.visa.api.repository.CountryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -34,35 +33,42 @@ public class VisaController {
 
     @CrossOrigin
     @GetMapping("/visas")
-    public ResponseEntity<List<VisaDTO>> getAllVisas(@RequestParam(required = false) String country_code,
+    public ResponseEntity<List<VisaDTO>> getAllVisas(
     @RequestParam(required = false) Double fees,
     @RequestParam(required = false) String region,
     @RequestParam(required = false) Integer process_time_in_days,
     @RequestParam(required = false) Integer low_gdp,
-    @RequestParam(required = false) Integer high_gdp
+    @RequestParam(required = false) Integer high_gdp,
+    @RequestParam(required = false) boolean wants_perks,
+    @RequestParam(required = false) boolean wants_citizenship
     )
     {
-        
+
         List<VisaDTO> visaDTOs = new ArrayList<VisaDTO>();
         try {
             List<Visa> visas;
-            if (region != null && fees != null && process_time_in_days != null && low_gdp != null && high_gdp != null) {
-                visas = visaRepository.findByRegionAndFeesLessThanAndProcessTimeInDaysLessThanAndGdpRankBetweenOrderByGdpRankAsc(region, fees, process_time_in_days, low_gdp, high_gdp);
-            }
-            else if (country_code != null && fees != null) {
-                Country searchCountry = countryRepository.findCountryByCountryCode(country_code);
-                visas = visaRepository.findByCountryAndFeesLessThanOrderByGdpRankAsc(searchCountry, fees);
-            } else if (region != null && fees  != null) {
-                visas = visaRepository.findByRegionAndFeesLessThanOrderByGdpRankAsc(region, fees);
-            } else if (country_code != null) {
-                Country searchCountry = countryRepository.findCountryByCountryCode(country_code);
-                visas = visaRepository.findByCountry(searchCountry);
-            } else if (fees != null) {
-                visas = visaRepository.findByFeesLessThanOrderByGdpRankAsc(fees);
-            } else if (region != null) {
-                visas = visaRepository.findByRegionOrderByGdpRankAsc(region);
+            if (region == null) {
+                if (wants_citizenship && wants_perks) {
+                    visas = visaRepository.findByAllParametersExceptRegion(fees, process_time_in_days, low_gdp, high_gdp, true, true);
+
+                } else if (wants_citizenship) {
+                    visas = visaRepository.findByAllParametersExceptRegionAndPerks(fees, process_time_in_days, low_gdp, high_gdp, true);
+                } else if (wants_perks) {
+                    visas = visaRepository.findByAllParametersExceptRegionAndCitizenship(fees, process_time_in_days, low_gdp, high_gdp, true);
+                } else {
+                    visas = visaRepository.findByAllParametersExceptRegionAndCitizenshipAndPerks(fees, process_time_in_days, low_gdp, high_gdp);
+                }
             } else {
-                visas = visaRepository.findAll();
+                if (!wants_citizenship && !wants_perks) {
+                    visas = visaRepository.findByAllParametersExceptCitizenshipAndPerks(region, fees, process_time_in_days, low_gdp, high_gdp);
+                } else if (!wants_citizenship) {
+                    visas = visaRepository.findByAllParametersExceptPerks(region, fees, process_time_in_days, low_gdp, high_gdp, true);
+                } else if (!wants_perks) {
+                    visas = visaRepository.findByAllParametersExceptCitizenship(region, fees, process_time_in_days, low_gdp, high_gdp, true);
+                } else {
+                    visas = visaRepository.findByAllParameters(region, fees, process_time_in_days, low_gdp, high_gdp, true, true);
+                    System.out.println("citizen and perk");
+                }
             }
             if (visas.isEmpty())
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -70,7 +76,10 @@ public class VisaController {
             visaDTOs = visas.stream().map(this::mapToDto).collect(Collectors.toList());
             return new ResponseEntity<>(visaDTOs, HttpStatus.OK);
         } catch (Exception e) {
+            System.out.println("INTERNAL_SERVER_ERROR:");
+            System.out.println(e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+
         }
 
     }
@@ -80,7 +89,8 @@ public class VisaController {
         dto.setVisaId(visa.getVisaId());
         dto.setName(visa.getName());
         dto.setProcessTimeInDays(visa.getProcessTimeInDays());
-        dto.setFees(visa.getFees());
+        dto.setFeesLow(visa.getFeesLow());
+        dto.setFeesHigh(visa.getFeesHigh());
         dto.setCountryCode(visa.getCountry().getCountryCode());
         dto.setRegion(visa.getRegion());
         dto.setGdpRank(visa.getGdpRank());

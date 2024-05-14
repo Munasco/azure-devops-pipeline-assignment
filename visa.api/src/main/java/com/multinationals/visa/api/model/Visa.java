@@ -24,7 +24,9 @@ public class Visa {
 
     private Integer processTimeInDays;
 
-    private Double fees;
+    private Double feesLow;
+
+    private Double feesHigh;
 
     @ManyToOne
     @JoinColumn(name = "country_code", referencedColumnName = "countryCode")

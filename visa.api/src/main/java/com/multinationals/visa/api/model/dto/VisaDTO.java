@@ -7,7 +7,8 @@ public class VisaDTO {
     private long visaId;
     private String name;
     private int processTimeInDays;
-    private double fees;
+    private double feesLow;
+    private double feesHigh;
     private String countryCode;
     private String region;
     private int gdpRank;
