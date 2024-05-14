@@ -1,25 +1,32 @@
 import React from 'react';
 import './App.css';
+import AddVisaForm from "./containers/AddVisaForm/AddVisaForm";
+import SeeVisas from './containers/SeeVisas/SeeVisas';
+import { BrowserRouter as Router,
+        Route,
+        Routes,
+        Link,
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <form action="localhost" method="post" className="p-10">
-        <label htmlFor="name">Name</label>
-        <input type="text" name="name" id="name" />
-        <label htmlFor="processTimeInWeeks">Process time in weeks</label>
-        <input type="text" name="processTimeInWeeks" id="processTimeInWeeks" />
-        <label htmlFor="fees">fees</label>
-        <input type="text" name="fees" id="fees" />
-        <label htmlFor="country">country</label>
-        <input type="text" name="country" id="country" />
-        <label htmlFor="region">region</label>
-        <input type="text" name="region" id="region" />
-        <label htmlFor="gdpRank">GDP rank</label>
-        <input type="text" name="gdpRank" id="gdpRank" />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li><Link to='/'>Home</Link></li>
+              <li><Link to='/post_visa'>Post Visa</Link></li>
+              <li><Link to='/see_visas'>See Visas</Link></li>
+            </ul>
+          </nav>
+
+        <Routes>
+          <Route path='/post_visa' element={<AddVisaForm/>} />
+          <Route path='/see_visas' element={<SeeVisas/>}/>
+        </Routes>
+
+        </div>
+      </Router>
   );
 }
 
