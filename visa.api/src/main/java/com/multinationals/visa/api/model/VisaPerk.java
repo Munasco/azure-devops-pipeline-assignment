@@ -15,7 +15,6 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 public class VisaPerk {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,4 +27,8 @@ public class VisaPerk {
 
     @Column(name = "perk")
     private String perk;
+
+    public VisaPerk() {
+
+    }
 }

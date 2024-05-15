@@ -20,7 +20,6 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 public class User {
     @Id
     private String email;
@@ -30,6 +29,10 @@ public class User {
     private LocalDate dateOfBirth;
 
     private String country;
+
+    public User() {
+
+    }
 
     public void setDateOfBirth(long dobUnix) {
         Instant dateInstance = Instant.ofEpochMilli(dobUnix);

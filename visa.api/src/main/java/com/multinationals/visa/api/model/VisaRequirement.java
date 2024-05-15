@@ -15,7 +15,6 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 public class VisaRequirement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,4 +26,8 @@ public class VisaRequirement {
     private Visa visa;
 
     private String requirement;
+
+    public VisaRequirement() {
+
+    }
 }

@@ -18,7 +18,6 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 public class VisaDocument {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,6 +30,10 @@ public class VisaDocument {
 
     @Column(name = "document")
     private String document;
+
+    public VisaDocument() {
+
+    }
 
     public String getDocument() {
         return document;

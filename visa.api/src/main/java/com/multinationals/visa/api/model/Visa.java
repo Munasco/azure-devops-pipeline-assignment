@@ -14,7 +14,6 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 public class Visa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -51,4 +50,8 @@ public class Visa {
 
     @OneToMany(mappedBy = "visa", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<VisaPerk> perks;
+
+    public Visa() {
+
+    }
 }

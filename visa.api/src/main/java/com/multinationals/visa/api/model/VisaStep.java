@@ -17,7 +17,6 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 public class VisaStep {
 
     @Id
@@ -29,4 +28,8 @@ public class VisaStep {
     private Visa visa;
 
     private String step;
+
+    public VisaStep() {
+
+    }
 }

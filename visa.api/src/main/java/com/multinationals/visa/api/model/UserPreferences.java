@@ -14,7 +14,6 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 public class UserPreferences {
     @Id
     @Column(name = "email")
@@ -40,4 +39,8 @@ public class UserPreferences {
 
     @Column(name = "language_proficency")
     private int languageProficency;
+
+    public UserPreferences() {
+
+    }
 }

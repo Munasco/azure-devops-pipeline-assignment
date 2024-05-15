@@ -11,7 +11,6 @@ import java.util.List;
 @Data
 @Entity
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 public class Country {
 
     @Id
@@ -26,4 +25,8 @@ public class Country {
 
     @OneToMany(mappedBy = "country", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Visa> visas;
+
+    public Country() {
+
+    }
 }

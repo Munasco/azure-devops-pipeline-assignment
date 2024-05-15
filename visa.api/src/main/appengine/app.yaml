@@ -1,4 +1,4 @@
-runtime: "java21"
+runtime: "java17"
 service: "default"
 
 env: "flex"
@@ -10,8 +10,8 @@ handlers:
 manual_scaling:
   instances: 1
 
-health_check:
-  enable_health_check: false
-
 #env_variables:
 #  ENCRYPT_KEY: "your_encryption_key_here"
+#  DB_URL: "jdbc:mysql://34.130.13.64/visa_database?cloudSqlInstance=visa-database-api:northamerica-northeast2:visa-api-database&socketFactory=com.google.cloud.sql.mysql.SocketFactory"
+#  DB_PASSWORD: "Ismael1103"
+#  DB_USERNAME: "root"
