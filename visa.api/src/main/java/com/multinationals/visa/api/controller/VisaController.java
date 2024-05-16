@@ -22,7 +22,6 @@ import com.multinationals.visa.api.repository.VisaRepository;
 @CrossOrigin
 @RestController
 @RequestMapping(path="/api")
-
 public class VisaController {
 
     @Autowired

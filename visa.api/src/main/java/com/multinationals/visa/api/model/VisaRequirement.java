@@ -7,14 +7,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Data
 @Entity
-@AllArgsConstructor
 public class VisaRequirement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,5 +23,35 @@ public class VisaRequirement {
 
     public VisaRequirement() {
 
+    }
+
+    public VisaRequirement(long requirementId, Visa visa, String requirement) {
+        this.requirementId = requirementId;
+        this.visa = visa;
+        this.requirement = requirement;
+    }
+
+    public long getRequirementId() {
+        return requirementId;
+    }
+
+    public void setRequirementId(long requirementId) {
+        this.requirementId = requirementId;
+    }
+
+    public Visa getVisa() {
+        return visa;
+    }
+
+    public void setVisa(Visa visa) {
+        this.visa = visa;
+    }
+
+    public String getRequirement() {
+        return requirement;
+    }
+
+    public void setRequirement(String requirement) {
+        this.requirement = requirement;
     }
 }

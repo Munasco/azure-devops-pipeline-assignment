@@ -7,17 +7,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 /**
  * VisaDocument
  */
-@Data
 @Entity
-@AllArgsConstructor
 public class VisaDocument {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,6 +29,12 @@ public class VisaDocument {
 
     }
 
+    public VisaDocument(long documentId, Visa visa, String document) {
+        this.documentId = documentId;
+        this.visa = visa;
+        this.document = document;
+    }
+
     public String getDocument() {
         return document;
     }
@@ -42,5 +42,20 @@ public class VisaDocument {
     public void setDocument(String document) {
         this.document = document;
     }
-    
+
+    public long getDocumentId() {
+        return documentId;
+    }
+
+    public void setDocumentId(long documentId) {
+        this.documentId = documentId;
+    }
+
+    public Visa getVisa() {
+        return visa;
+    }
+
+    public void setVisa(Visa visa) {
+        this.visa = visa;
+    }
 }

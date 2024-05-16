@@ -1,16 +1,12 @@
 package com.multinationals.visa.api.model;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 import java.util.List;
 
-@Data
 @Entity
-@AllArgsConstructor
+
 public class Country {
 
     @Id
@@ -28,5 +24,53 @@ public class Country {
 
     public Country() {
 
+    }
+
+    public Country(long countryId, String countryName, String countryCode, String dialCode, List<Visa> visas) {
+        this.countryId = countryId;
+        this.countryName = countryName;
+        this.countryCode = countryCode;
+        this.dialCode = dialCode;
+        this.visas = visas;
+    }
+
+    public long getCountryId() {
+        return countryId;
+    }
+
+    public void setCountryId(long countryId) {
+        this.countryId = countryId;
+    }
+
+    public String getCountryName() {
+        return countryName;
+    }
+
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
+    }
+
+    public String getCountryCode() {
+        return countryCode;
+    }
+
+    public void setCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+    }
+
+    public String getDialCode() {
+        return dialCode;
+    }
+
+    public void setDialCode(String dialCode) {
+        this.dialCode = dialCode;
+    }
+
+    public List<Visa> getVisas() {
+        return visas;
+    }
+
+    public void setVisas(List<Visa> visas) {
+        this.visas = visas;
     }
 }
