@@ -1,0 +1,43 @@
+# Simple Azure DevOps Pipeline - Basic GitHub Checkout and List
+# This is a minimal pipeline that fulfills the assignment requirements:
+# 1. Checkout code from GitHub repository  
+# 2. List the contents of the repository
+
+# Trigger the pipeline on main branch changes
+trigger:
+- main
+- master
+
+# Use Ubuntu agent
+pool:
+  vmImage: 'ubuntu-latest'
+
+# Pipeline steps
+steps:
+# Step 1: Checkout code from GitHub
+- checkout: self
+  displayName: 'Checkout source code from GitHub'
+
+# Step 2: List repository contents  
+- script: |
+    echo "=== REPOSITORY CONTENTS ==="
+    echo "Current directory: $(pwd)"
+    echo ""
+    echo "Files and folders in repository:"
+    ls -la
+    echo ""
+    echo "Directory tree structure:"
+    find . -type d | head -10
+    echo ""
+    echo "Total number of files:"
+    find . -type f | wc -l
+  displayName: 'List repository contents'
+
+# Step 3: Show additional repository information
+- script: |
+    echo "=== ADDITIONAL REPOSITORY INFO ==="  
+    echo "Git branch: $(git branch --show-current)"
+    echo "Last commit: $(git log -1 --oneline)"
+    echo "Repository size:"
+    du -sh .
+  displayName: 'Show repository information'

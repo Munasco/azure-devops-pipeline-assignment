@@ -1,0 +1,34 @@
+# Azure DevOps Pipeline - GitHub Checkout and Repository Listing
+# Assignment: Simple pipeline to checkout code from GitHub and list repository contents
+
+trigger:
+- main
+- master
+- azuredev
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- checkout: self
+  displayName: 'Checkout code from GitHub repository'
+  clean: true
+
+- script: |
+    echo "=== REPOSITORY CONTENTS ==="
+    echo "Current working directory: $(pwd)"
+    echo "Repository: $(Build.Repository.Name)"
+    echo "Branch: $(Build.SourceBranchName)"
+    echo ""
+    echo "Root directory files and folders:"
+    ls -la
+    echo ""
+    echo "Directory structure:"
+    find . -type d -not -path '*/\.*' | head -10
+    echo ""
+    echo "File count by type:"
+    find . -name "*.js" -o -name "*.java" -o -name "*.tsx" -o -name "*.json" -o -name "*.md" | sed 's/.*\.//' | sort | uniq -c
+    echo ""
+    echo "Total files in repository:"
+    find . -type f | wc -l
+  displayName: 'List repository contents and structure'
