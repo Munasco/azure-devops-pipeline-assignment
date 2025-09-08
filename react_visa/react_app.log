@@ -1,0 +1,274 @@
+yarn run v1.22.22
+$ react-scripts start
+(node:10695) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:10695) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view react_visa in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://10.0.0.201:3001
+
+Note that the development build is not optimized.
+To create a production build, use yarn build.
+
+webpack compiled successfully
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/containers/SeeVisas/SeeVisas.tsx
+  Line 1:38:   'useMemo' is defined but never used        @typescript-eslint/no-unused-vars
+  Line 6:10:   'Input' is defined but never used          @typescript-eslint/no-unused-vars
+  Line 7:10:   'Select' is defined but never used         @typescript-eslint/no-unused-vars
+  Line 7:18:   'SelectContent' is defined but never used  @typescript-eslint/no-unused-vars
+  Line 7:33:   'SelectItem' is defined but never used     @typescript-eslint/no-unused-vars
+  Line 7:45:   'SelectTrigger' is defined but never used  @typescript-eslint/no-unused-vars
+  Line 7:60:   'SelectValue' is defined but never used    @typescript-eslint/no-unused-vars
+  Line 8:10:   'Checkbox' is defined but never used       @typescript-eslint/no-unused-vars
+  Line 9:10:   'Label' is defined but never used          @typescript-eslint/no-unused-vars
+  Line 10:64:  'Search' is defined but never used         @typescript-eslint/no-unused-vars
+  Line 10:72:  'Filter' is defined but never used         @typescript-eslint/no-unused-vars
+  Line 10:80:  'X' is defined but never used              @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/containers/SeeVisas/SeeVisas.tsx
+  Line 1:38:   'useMemo' is defined but never used        @typescript-eslint/no-unused-vars
+  Line 6:10:   'Input' is defined but never used          @typescript-eslint/no-unused-vars
+  Line 7:10:   'Select' is defined but never used         @typescript-eslint/no-unused-vars
+  Line 7:18:   'SelectContent' is defined but never used  @typescript-eslint/no-unused-vars
+  Line 7:33:   'SelectItem' is defined but never used     @typescript-eslint/no-unused-vars
+  Line 7:45:   'SelectTrigger' is defined but never used  @typescript-eslint/no-unused-vars
+  Line 7:60:   'SelectValue' is defined but never used    @typescript-eslint/no-unused-vars
+  Line 8:10:   'Checkbox' is defined but never used       @typescript-eslint/no-unused-vars
+  Line 9:10:   'Label' is defined but never used          @typescript-eslint/no-unused-vars
+  Line 10:64:  'Search' is defined but never used         @typescript-eslint/no-unused-vars
+  Line 10:72:  'Filter' is defined but never used         @typescript-eslint/no-unused-vars
+  Line 10:80:  'X' is defined but never used              @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/containers/SeeVisas/SeeVisas.tsx
+  Line 1:38:   'useMemo' is defined but never used                        @typescript-eslint/no-unused-vars
+  Line 6:10:   'Input' is defined but never used                          @typescript-eslint/no-unused-vars
+  Line 7:10:   'Select' is defined but never used                         @typescript-eslint/no-unused-vars
+  Line 7:18:   'SelectContent' is defined but never used                  @typescript-eslint/no-unused-vars
+  Line 7:33:   'SelectItem' is defined but never used                     @typescript-eslint/no-unused-vars
+  Line 7:45:   'SelectTrigger' is defined but never used                  @typescript-eslint/no-unused-vars
+  Line 7:60:   'SelectValue' is defined but never used                    @typescript-eslint/no-unused-vars
+  Line 8:10:   'Checkbox' is defined but never used                       @typescript-eslint/no-unused-vars
+  Line 9:10:   'Label' is defined but never used                          @typescript-eslint/no-unused-vars
+  Line 10:64:  'Search' is defined but never used                         @typescript-eslint/no-unused-vars
+  Line 10:72:  'Filter' is defined but never used                         @typescript-eslint/no-unused-vars
+  Line 10:80:  'X' is defined but never used                              @typescript-eslint/no-unused-vars
+  Line 18:12:  'searchTerm' is assigned a value but never used            @typescript-eslint/no-unused-vars
+  Line 18:24:  'setSearchTerm' is assigned a value but never used         @typescript-eslint/no-unused-vars
+  Line 19:12:  'selectedRegion' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 19:28:  'setSelectedRegion' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  Line 20:12:  'selectedCountry' is assigned a value but never used       @typescript-eslint/no-unused-vars
+  Line 20:29:  'setSelectedCountry' is assigned a value but never used    @typescript-eslint/no-unused-vars
+  Line 21:12:  'maxProcessingTime' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  Line 21:31:  'setMaxProcessingTime' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 22:12:  'maxFees' is assigned a value but never used               @typescript-eslint/no-unused-vars
+  Line 22:21:  'setMaxFees' is assigned a value but never used            @typescript-eslint/no-unused-vars
+  Line 23:12:  'hasPerks' is assigned a value but never used              @typescript-eslint/no-unused-vars
+  Line 23:22:  'setHasPerks' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  Line 24:12:  'hasCitizenship' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 24:28:  'setHasCitizenship' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  Line 25:12:  'sortBy' is assigned a value but never used                @typescript-eslint/no-unused-vars
+  Line 25:20:  'setSortBy' is assigned a value but never used             @typescript-eslint/no-unused-vars
+  Line 26:12:  'showFilters' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  Line 26:25:  'setShowFilters' is assigned a value but never used        @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/containers/SeeVisas/SeeVisas.tsx
+  Line 1:38:   'useMemo' is defined but never used                        @typescript-eslint/no-unused-vars
+  Line 6:10:   'Input' is defined but never used                          @typescript-eslint/no-unused-vars
+  Line 7:10:   'Select' is defined but never used                         @typescript-eslint/no-unused-vars
+  Line 7:18:   'SelectContent' is defined but never used                  @typescript-eslint/no-unused-vars
+  Line 7:33:   'SelectItem' is defined but never used                     @typescript-eslint/no-unused-vars
+  Line 7:45:   'SelectTrigger' is defined but never used                  @typescript-eslint/no-unused-vars
+  Line 7:60:   'SelectValue' is defined but never used                    @typescript-eslint/no-unused-vars
+  Line 8:10:   'Checkbox' is defined but never used                       @typescript-eslint/no-unused-vars
+  Line 9:10:   'Label' is defined but never used                          @typescript-eslint/no-unused-vars
+  Line 10:64:  'Search' is defined but never used                         @typescript-eslint/no-unused-vars
+  Line 10:72:  'Filter' is defined but never used                         @typescript-eslint/no-unused-vars
+  Line 10:80:  'X' is defined but never used                              @typescript-eslint/no-unused-vars
+  Line 18:12:  'searchTerm' is assigned a value but never used            @typescript-eslint/no-unused-vars
+  Line 18:24:  'setSearchTerm' is assigned a value but never used         @typescript-eslint/no-unused-vars
+  Line 19:12:  'selectedRegion' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 19:28:  'setSelectedRegion' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  Line 20:12:  'selectedCountry' is assigned a value but never used       @typescript-eslint/no-unused-vars
+  Line 20:29:  'setSelectedCountry' is assigned a value but never used    @typescript-eslint/no-unused-vars
+  Line 21:12:  'maxProcessingTime' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  Line 21:31:  'setMaxProcessingTime' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 22:12:  'maxFees' is assigned a value but never used               @typescript-eslint/no-unused-vars
+  Line 22:21:  'setMaxFees' is assigned a value but never used            @typescript-eslint/no-unused-vars
+  Line 23:12:  'hasPerks' is assigned a value but never used              @typescript-eslint/no-unused-vars
+  Line 23:22:  'setHasPerks' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  Line 24:12:  'hasCitizenship' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 24:28:  'setHasCitizenship' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  Line 25:12:  'sortBy' is assigned a value but never used                @typescript-eslint/no-unused-vars
+  Line 25:20:  'setSortBy' is assigned a value but never used             @typescript-eslint/no-unused-vars
+  Line 26:12:  'showFilters' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  Line 26:25:  'setShowFilters' is assigned a value but never used        @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/containers/SeeVisas/SeeVisas.tsx
+  Line 6:10:    'Input' is defined but never used                            @typescript-eslint/no-unused-vars
+  Line 7:10:    'Select' is defined but never used                           @typescript-eslint/no-unused-vars
+  Line 7:18:    'SelectContent' is defined but never used                    @typescript-eslint/no-unused-vars
+  Line 7:33:    'SelectItem' is defined but never used                       @typescript-eslint/no-unused-vars
+  Line 7:45:    'SelectTrigger' is defined but never used                    @typescript-eslint/no-unused-vars
+  Line 7:60:    'SelectValue' is defined but never used                      @typescript-eslint/no-unused-vars
+  Line 8:10:    'Checkbox' is defined but never used                         @typescript-eslint/no-unused-vars
+  Line 9:10:    'Label' is defined but never used                            @typescript-eslint/no-unused-vars
+  Line 10:64:   'Search' is defined but never used                           @typescript-eslint/no-unused-vars
+  Line 10:72:   'Filter' is defined but never used                           @typescript-eslint/no-unused-vars
+  Line 10:80:   'X' is defined but never used                                @typescript-eslint/no-unused-vars
+  Line 25:20:   'setSortBy' is assigned a value but never used               @typescript-eslint/no-unused-vars
+  Line 26:12:   'showFilters' is assigned a value but never used             @typescript-eslint/no-unused-vars
+  Line 26:25:   'setShowFilters' is assigned a value but never used          @typescript-eslint/no-unused-vars
+  Line 54:11:   'regions' is assigned a value but never used                 @typescript-eslint/no-unused-vars
+  Line 59:11:   'countries' is assigned a value but never used               @typescript-eslint/no-unused-vars
+  Line 65:11:   'filteredAndSortedVisas' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 117:11:  'clearFilters' is assigned a value but never used            @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/containers/SeeVisas/SeeVisas.tsx
+  Line 6:10:    'Input' is defined but never used                            @typescript-eslint/no-unused-vars
+  Line 7:10:    'Select' is defined but never used                           @typescript-eslint/no-unused-vars
+  Line 7:18:    'SelectContent' is defined but never used                    @typescript-eslint/no-unused-vars
+  Line 7:33:    'SelectItem' is defined but never used                       @typescript-eslint/no-unused-vars
+  Line 7:45:    'SelectTrigger' is defined but never used                    @typescript-eslint/no-unused-vars
+  Line 7:60:    'SelectValue' is defined but never used                      @typescript-eslint/no-unused-vars
+  Line 8:10:    'Checkbox' is defined but never used                         @typescript-eslint/no-unused-vars
+  Line 9:10:    'Label' is defined but never used                            @typescript-eslint/no-unused-vars
+  Line 10:64:   'Search' is defined but never used                           @typescript-eslint/no-unused-vars
+  Line 10:72:   'Filter' is defined but never used                           @typescript-eslint/no-unused-vars
+  Line 10:80:   'X' is defined but never used                                @typescript-eslint/no-unused-vars
+  Line 25:20:   'setSortBy' is assigned a value but never used               @typescript-eslint/no-unused-vars
+  Line 26:12:   'showFilters' is assigned a value but never used             @typescript-eslint/no-unused-vars
+  Line 26:25:   'setShowFilters' is assigned a value but never used          @typescript-eslint/no-unused-vars
+  Line 54:11:   'regions' is assigned a value but never used                 @typescript-eslint/no-unused-vars
+  Line 59:11:   'countries' is assigned a value but never used               @typescript-eslint/no-unused-vars
+  Line 65:11:   'filteredAndSortedVisas' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 117:11:  'clearFilters' is assigned a value but never used            @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/containers/SeeVisas/SeeVisas.tsx:56:20
+TS2802: Type 'Set<string>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+    54 |     const regions = useMemo(() => {
+    55 |         if (!allVisas) return [];
+  > 56 |         return [...new Set(allVisas.map(visa => visa.region))];
+       |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    57 |     }, [allVisas]);
+    58 |
+    59 |     const countries = useMemo(() => {
+
+ERROR in src/containers/SeeVisas/SeeVisas.tsx:61:20
+TS2802: Type 'Set<string>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+    59 |     const countries = useMemo(() => {
+    60 |         if (!allVisas) return [];
+  > 61 |         return [...new Set(allVisas.map(visa => visa.countryCode))];
+       |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    62 |     }, [allVisas]);
+    63 |
+    64 |     // Filter and sort visas
+
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+ERROR in src/containers/SeeVisas/SeeVisas.tsx:56:20
+TS2802: Type 'Set<string>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+    54 |     const regions = useMemo(() => {
+    55 |         if (!allVisas) return [];
+  > 56 |         return [...new Set(allVisas.map(visa => visa.region))];
+       |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    57 |     }, [allVisas]);
+    58 |
+    59 |     const countries = useMemo(() => {
+
+ERROR in src/containers/SeeVisas/SeeVisas.tsx:61:20
+TS2802: Type 'Set<string>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+    59 |     const countries = useMemo(() => {
+    60 |         if (!allVisas) return [];
+  > 61 |         return [...new Set(allVisas.map(visa => visa.countryCode))];
+       |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    62 |     }, [allVisas]);
+    63 |
+    64 |     // Filter and sort visas
+
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+ERROR in src/containers/SeeVisas/SeeVisas.tsx:56:20
+TS2802: Type 'Set<string>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+    54 |     const regions = useMemo(() => {
+    55 |         if (!allVisas) return [];
+  > 56 |         return [...new Set(allVisas.map(visa => visa.region))];
+       |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    57 |     }, [allVisas]);
+    58 |
+    59 |     const countries = useMemo(() => {
+
+ERROR in src/containers/SeeVisas/SeeVisas.tsx:61:20
+TS2802: Type 'Set<string>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+    59 |     const countries = useMemo(() => {
+    60 |         if (!allVisas) return [];
+  > 61 |         return [...new Set(allVisas.map(visa => visa.countryCode))];
+       |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    62 |     }, [allVisas]);
+    63 |
+    64 |     // Filter and sort visas
+
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+ERROR in src/containers/SeeVisas/SeeVisas.tsx:56:20
+TS2802: Type 'Set<string>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+    54 |     const regions = useMemo(() => {
+    55 |         if (!allVisas) return [];
+  > 56 |         return [...new Set(allVisas.map(visa => visa.region))];
+       |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    57 |     }, [allVisas]);
+    58 |
+    59 |     const countries = useMemo(() => {
+
+ERROR in src/containers/SeeVisas/SeeVisas.tsx:61:20
+TS2802: Type 'Set<string>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+    59 |     const countries = useMemo(() => {
+    60 |         if (!allVisas) return [];
+  > 61 |         return [...new Set(allVisas.map(visa => visa.countryCode))];
+       |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    62 |     }, [allVisas]);
+    63 |
+    64 |     // Filter and sort visas
+
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+No issues found.
+Done in 235411.55s.

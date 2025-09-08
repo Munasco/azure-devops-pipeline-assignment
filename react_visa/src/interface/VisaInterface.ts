@@ -7,12 +7,16 @@ export interface VisaInterface {
     visaId: number,
     name: string,
     processTimeInDays: number,
-    fees: number,
-    country_code: string,
+    feesLow: number,
+    feesHigh: number,
+    countryCode: string,
     region: string,
     gdpRank: number,
-    documents: Array<VisaDocumentInteface>,
-    steps: Array<VisaStepInterface>,
-    requirements: Array<VisaRequirementInterface>,
-    perks: Array<VisaPerkInterface>
+    hasPerks: boolean,
+    hasRoadToCitizenship: boolean,
+    // Optional fields for future use
+    documents?: Array<VisaDocumentInteface>,
+    steps?: Array<VisaStepInterface>,
+    requirements?: Array<VisaRequirementInterface>,
+    perks?: Array<VisaPerkInterface>
 }
